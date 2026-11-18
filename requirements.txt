@@ -1,0 +1,4 @@
+# versions used for the initial cpu experiments (python 3.12).
+numpy==2.4.4
+numba==0.67.0
+torch==2.13.0

@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #030407;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+}
+#viewport {
+  height: calc(100dvh - 78px);
+  touch-action: none;
+  cursor: grab;
+}
+canvas {
+  display: block;
+}
+header,
+#key {
+  position: absolute;
+  pointer-events: none;
+  left: 3vw;
+}
+header {
+  top: 3vh;
+  border-left: 3px solid #fc3d21;
+  padding-left: 14px;
+}
+h1 {
+  font-weight: normal;
+  font-size: clamp(24px, 3vw, 46px);
+  margin: 0;
+}
+header p,
+#clock,
+#rate {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+}
+#key {
+  bottom: 102px;
+}
+#key span {
+  color: #fc3d21;
+}
+#key b {
+  color: #609afa;
+}
+footer {
+  height: 78px;
+  position: relative;
+  background: #0b3d91;
+  border-top: 1px solid white;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 105px 0 3vw;
+}
+.modes {
+  display: flex;
+  gap: 4px;
+}
+button,
+input {
+  font: inherit;
+  border: 1px solid #a5bbdc;
+  background: #082757;
+  color: white;
+  padding: 9px 14px;
+  border-radius: 0;
+}
+button {
+  cursor: pointer;
+}
+.on,
+button:hover {
+  background: white;
+  color: #082757;
+}
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #fc3d21;
+}
+#clock {
+  margin-left: auto;
+}
+#transport {
+  position: absolute;
+  right: 3vw;
+  top: -34px;
+  text-align: center;
+}
+#dial {
+  background: #07090d;
+  color: white;
+  border: 3px double white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  touch-action: none;
+  font-size: 24px;
+}
+#dial i {
+  position: absolute;
+  inset: 3px 30px auto;
+  height: 9px;
+  background: #fc3d21;
+  transform-origin: 50% 28px;
+}
+#rate {
+  display: block;
+  margin-top: 5px;
+}
+#setup {
+  position: absolute;
+  bottom: 86px;
+  left: 3vw;
+  max-width: 94vw;
+  background: #061b40;
+  border: 1px solid white;
+  padding: 18px;
+}
+h2 {
+  font-size: 22px;
+  margin: 0 0 12px;
+  font-weight: normal;
+}
+#inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+label {
+  font-size: 14px;
+}
+input {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  background: #071224;
+}
+@media (max-width: 650px) {
+  footer {
+    padding-left: 6px;
+    padding-right: 72px;
+  }
+  .modes button {
+    font-size: 13px;
+    padding: 8px 5px;
+  }
+  #clock {
+    position: absolute;
+    bottom: 3px;
+  }
+  #transport {
+    right: 6px;
+  }
+  #setup {
+    left: 2vw;
+  }
+}
+
+#frames {
+  position: absolute;
+  right: 3vw;
+  top: 3vh;
+  display: flex;
+}
+#clock {
+  margin-right: 48px;
+  text-align: right;
+  white-space: pre-line;
+  line-height: 1.4;
+}
+.burn-note {
+  position: absolute;
+  pointer-events: none;
+  color: white;
+  font:
+    11px "Courier New",
+    monospace;
+  background: #08090c;
+  padding: 1px 3px;
+}
+@media (max-width: 700px) {
+  #frames {
+    top: 90px;
+  }
+  #clock {
+    position: fixed;
+    bottom: 91px;
+    right: 5px;
+    margin: 0;
+  }
+  .burn-note {
+    font-size: 9px;
+  }
+}
+
+#frames label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+#centerSwitch {
+  appearance: none;
+  width: 44px;
+  height: 22px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background: #082757;
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 12px;
+}
+#centerSwitch:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+}
+#centerSwitch:checked:before {
+  transform: translateX(22px);
+}
+#clock {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-content: center;
+  column-gap: clamp(12px, 1.7vw, 30px);
+  row-gap: 5px;
+}
+#clock span {
+  white-space: nowrap;
+}
+@media (max-width: 850px) {
+  #clock {
+    position: absolute;
+    right: 1vw;
+    bottom: 110px;
+    margin: 0;
+    max-width: 94vw;
+    font-size: 12px;
+  }
+}

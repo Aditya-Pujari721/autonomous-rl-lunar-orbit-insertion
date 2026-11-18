@@ -1,0 +1,17 @@
+# local research history and generated runs
+/archive/
+/runs/
+/dist/
+# python, ide and machine-specific dependencies
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.venv/
+.idea/
+.tool_deps/
+.library_transfer_current/
+.pytest_cache/
+.coverage
+htmlcov/
+# keep the frozen model/ checkpoint under version control.

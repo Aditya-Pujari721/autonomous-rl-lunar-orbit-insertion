@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lunar capture / Flight viewer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main
+      id="viewport"
+      aria-label="Interactive three-dimensional lunar capture scene"
+    ></main>
+    <nav id="frames" aria-label="Reference frame">
+      <label for="centerSwitch"
+        >Earth
+        <input
+          id="centerSwitch"
+          type="checkbox"
+          role="switch"
+          aria-label="Moon-centered view"
+        />
+        Moon</label
+      >
+    </nav>
+    <aside id="charts" hidden style="position:absolute;right:1rem;top:1rem;width:min(21vw,340px);pointer-events:none"><canvas id="captures" width="480" height="115" style="width:100%"></canvas><canvas id="captureRate" width="480" height="115" style="width:100%"></canvas></aside>
+    <header>
+      <h1>Lunar capture</h1>
+      <p id="status" role="status">Loading flight</p>
+    </header>
+    <div id="key"><span>━</span> Policy &nbsp; <b>┄</b> Coast</div>
+    <form id="setup" hidden>
+      <h2>Incoming lunar approach</h2>
+      <div id="inputs"></div>
+      <button>Run trajectory</button>
+      <button type="button" id="close">Cancel</button>
+    </form>
+    <footer>
+      <div class="modes">
+        <button id="training">Show training</button
+        ><button id="random" class="on">Random trajectory</button
+        ><button id="custom">Set trajectory</button>
+      </div>
+      <output id="clock"></output>
+      <div id="transport">
+        <button
+          id="dial"
+          aria-label="Pause or play. Drag clockwise to increase speed. Arrow keys change speed."
+          title="Click to pause/play · Turn to change speed"
+        >
+          <i></i><span id="symbol">Ⅱ</span></button
+        ><output id="rate">1.0×</output>
+      </div>
+    </footer>
+    <script type="module" src="app.js?v=8"></script>
+  </body>
+</html>

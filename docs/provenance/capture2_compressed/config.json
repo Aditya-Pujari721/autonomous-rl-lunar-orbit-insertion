@@ -1,0 +1,28 @@
+{
+  "updates": 256,
+  "envs": 16,
+  "horizon": 128,
+  "variant": "distance",
+  "name": "capture2_compressed",
+  "seed": 42,
+  "frame": "local",
+  "resume": null,
+  "task": "capture",
+  "compress_dry": true,
+  "gamma": 1.0,
+  "lambda": 0.97,
+  "exact_navigation": true,
+  "seed_split_sha256": "d41f04cd6bd50d67822158c1f2a374cca9bd0065b1d86c97c5e1c006e3537955",
+  "python": "3.12.6",
+  "torch": "2.13.0+cpu",
+  "source_sha256": {
+    "audit.py": "8f0f94cdbeaab7a57433f44f5999e538c80ab317616ae6444eef67a978d7b663",
+    "environment.py": "1076244b1cc62bad8adaaaf912af5e847b6a7e0c3e31f44e59a2bba9cca3b7c2",
+    "evaluate_tasks.py": "dc33fa403c1aaa9d91efe290662ed9cbde7b9cb80361fc6044680913b11e6513",
+    "physics.py": "7868b5c52bce59a0a61a9224de417e172861cfb5e561d802d3c40200b04607c2",
+    "report.py": "82d1fe6c9bba8348fba20720a0e60afe4951a176973f8495b41c9428ec8d03cd",
+    "tasks.py": "bb23b9daf034cbe5bf76698d612344a3ef39e9e2aa2e6620bc8cfd30ee637b46",
+    "train.py": "b4b1a1b6d2803c7f8deefcd5721fbfbfe5a91c5234781e1de4d14be63fab028f",
+    "__init__.py": "1002ee780b59ee2ebbfbf63cd7d28606cf9dd6494e3384a8ad11fd1cf801978e"
+  }
+}
