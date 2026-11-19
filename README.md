@@ -2,7 +2,7 @@
 
 A hybrid-action reinforcement-learning framework for autonomous lunar orbit capture of an Apollo 8 CSM-modeled spacecraft, trained over randomized hyperbolic approaches in a custom finite-thrust Earth-Moon simulator (variable mass, adaptive RK4, impact event detection). A PPO controller maps a 25-dimensional navigation, propellant, and engine-state observation to coast/thrust mode, 3D thrust direction, and burn/coast durations, with no reference trajectory or inference-time optimizer. Frozen checkpoints are evaluated against a matched no-burn baseline on seeded held-out approaches. A Dockerized REST API serves trajectories and burn telemetry to an interactive Three.js 3D viewer.
 
-![Earth–Moon trajectory viewer showing a simulated lunar approach](viewer/static/viewer.png)
+![Earth–Moon trajectory viewer showing a simulated lunar approach](viewer/static/viewer.gif)
 
 | Benchmark on 512 held-out approaches | Result |
 |---|---:|
